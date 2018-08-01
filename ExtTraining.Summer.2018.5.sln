@@ -3,7 +3,42 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "No8", "No8\No8.csproj", "{AF291933-6A00-4D4C-9B53-4765780A37E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "No8.Solution", "No8.Solution\No8.Solution.csproj", "{BB48C208-6E41-4E5A-B4B0-43097F53499D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "No8.Solution.Console", "No8.Solution.Console\No8.Solution.Console.csproj", "{03F6D16C-FF30-4471-B462-39FB36C6625E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "No8.Solution.Tests", "No8.Solution.Tests\No8.Solution.Tests.csproj", "{165118C0-B662-4290-8E7D-2CAF15E32A2D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{734633B6-CBD1-4C6D-BEBB-9955B643D31C}"
+	ProjectSection(SolutionItems) = preProject
+		..\ASP.NET MVC Training. Spring 2018\LabExam\LabExam-master\README.md = ..\ASP.NET MVC Training. Spring 2018\LabExam\LabExam-master\README.md
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF291933-6A00-4D4C-9B53-4765780A37E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF291933-6A00-4D4C-9B53-4765780A37E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF291933-6A00-4D4C-9B53-4765780A37E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF291933-6A00-4D4C-9B53-4765780A37E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB48C208-6E41-4E5A-B4B0-43097F53499D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB48C208-6E41-4E5A-B4B0-43097F53499D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB48C208-6E41-4E5A-B4B0-43097F53499D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB48C208-6E41-4E5A-B4B0-43097F53499D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03F6D16C-FF30-4471-B462-39FB36C6625E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03F6D16C-FF30-4471-B462-39FB36C6625E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03F6D16C-FF30-4471-B462-39FB36C6625E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03F6D16C-FF30-4471-B462-39FB36C6625E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{165118C0-B662-4290-8E7D-2CAF15E32A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{165118C0-B662-4290-8E7D-2CAF15E32A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{165118C0-B662-4290-8E7D-2CAF15E32A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{165118C0-B662-4290-8E7D-2CAF15E32A2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
