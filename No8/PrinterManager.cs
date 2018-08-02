@@ -14,8 +14,10 @@ namespace No8
             Printers = new List<object>();
         }
 
+        // репозиторий принтеров
         public static List<object> Printers { get; set; }
 
+        // добавляет новый принтер
         public static void Add(Printer p1)
         {
             Console.WriteLine("Enter printer name");
@@ -30,12 +32,15 @@ namespace No8
             }
         }
 
+        #region Печать
         public static void Print(EpsonPrinter p1)
         {
             Log("Print started");
             var o = new OpenFileDialog();
             o.ShowDialog();
+            // чтение из потока
             var f = File.OpenRead(o.FileName);
+            // запись в поток
             p1.Print(f);
             Log("Print finished");
         }
@@ -49,12 +54,14 @@ namespace No8
             p1.Print(f);
             Log("Print finished");
         }
-
+        #endregion
+        
         public static void Log(string s)
         {
             File.AppendText("log.txt").Write(s);
         }
 
+        // callback
         public static event PrinterDelegate OnPrinted;
     }
 }
