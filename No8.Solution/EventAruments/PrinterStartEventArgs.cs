@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace No8.Solution
+namespace No8.Solution.EventAruments
 {
-    public interface IPrinterRepository
+    public class PrinterStartEventArgs : EventArgs
     {
-        PrinterEntity Read(string name, string model);
+
     }
 }

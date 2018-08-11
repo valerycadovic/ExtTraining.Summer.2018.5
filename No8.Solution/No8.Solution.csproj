@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,15 +43,13 @@
   <ItemGroup>
     <Compile Include="CanonPrinter.cs" />
     <Compile Include="EpsonPrinter.cs" />
-    <Compile Include="FakeRepository.cs" />
-    <Compile Include="IFileParser.cs" />
+    <Compile Include="EventAruments\PrinterFinishEventArgs.cs" />
+    <Compile Include="EventAruments\PrinterStartEventArgs.cs" />
+    <Compile Include="Logers\ILoger.cs" />
     <Compile Include="Printer.cs" />
-    <Compile Include="IPrinterRepository.cs" />
-    <Compile Include="PrinterEntity.cs" />
-    <Compile Include="PrinterService.cs" />
-    <Compile Include="PrintFinishedEventArgs.cs" />
-    <Compile Include="PrintStartedEventArgs.cs" />
+    <Compile Include="PrinterManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logers\ConsoleLoger.cs" />
+    <Compile Include="PrinterFactories\CanonPrinterFactory.cs" />
+    <Compile Include="PrinterFactories\EpsonPrinterFactory.cs" />
+    <Compile Include="PrinterFactories\PrinterFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

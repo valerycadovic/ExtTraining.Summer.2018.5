@@ -1,20 +1,46 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace No8.Solution
 {
-    public class CanonPrinter : Printer
+    using System.IO;
+
+    public sealed class CanonPrinter : Printer
     {
-        protected override void SpecialPrint(FileStream @from, TextWriter to)
+        private const int DefaultBufferSize = 32;
+
+        private readonly TextWriter drain;
+
+        public CanonPrinter(TextWriter drain, string model) : base(model)
         {
-            for (int i = 0; i < from.Length; i++)
+            ValidateOnNull(drain, nameof(drain));
+            this.drain = drain;
+        }
+
+        public override string Name => "Canon";
+
+        protected override void UniquePrint(Stream stream)
+        {
+            byte[] dummy = new byte[DefaultBufferSize];
+
+            while (true)
             {
-                to.Write(from.ReadByte());
+                Array.Clear(dummy, 0, dummy.Length);
+                int bytesRead = stream.Read(dummy, 0, dummy.Length);
+                
+                if (bytesRead == 0)
+                {
+                    break;
+                }
+                drain.Write(string.Join(string.Empty, dummy.Take(bytesRead).Select(b => (char)b)));
             }
+
+        }
+
+        public override void Dispose()
+        {
+            drain.Dispose();
         }
     }
 }

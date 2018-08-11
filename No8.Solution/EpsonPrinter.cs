@@ -1,21 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace No8.Solution
+﻿namespace No8.Solution
 {
-    public class EpsonPrinter : Printer
+    using System;
+    using System.IO;
+
+    public sealed class EpsonPrinter : Printer
     {
-        // Я не знаю, чем они должны отличаться
-        protected override void SpecialPrint(FileStream @from, TextWriter to)
+        private readonly TextWriter drain;
+
+        public EpsonPrinter(TextWriter drain, string model) : base(model)
         {
-            for (int i = 0; i < from.Length; i++)
+            ValidateOnNull(drain, nameof(drain));
+
+            this.drain = drain;
+        }
+
+        public override string Name => "Epson";
+
+        protected override void UniquePrint(Stream stream)
+        {
+            for (int i = 0; i < stream.Length; i++)
             {
-                to.Write(from.ReadByte());
+                drain.Write((char)stream.ReadByte());
             }
+        }
+
+        public override void Dispose()
+        {
+            drain.Dispose();
         }
     }
 }

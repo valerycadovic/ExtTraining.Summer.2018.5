@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace No8.Solution
+namespace No8.Solution.EventAruments
 {
-    public interface IFileParser
+    public class PrinterFinishEventArgs : EventArgs
     {
-        void Parse();
     }
 }
